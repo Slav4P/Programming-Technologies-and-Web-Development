@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Дорожные знаки</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+    .tooltip { position: relative; }
+    .ui-tooltip {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 5px;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        <img src="img\signs\2_1.svg" class="tooltip" data-hint="Главная дорога" alt="Знак">
+        <img src="img\signs\2_5.svg" class="tooltip" data-hint="Движение без остановки запрещено" alt="Знак">
+        <img src="img\signs\2_4.svg" class="tooltip" data-hint="Уступите дорогу" alt="Знак">
+    </p>
+    <p>
+        <img src="img\signs\3_1.svg" class="tooltip" data-hint="Въезд запрещен" alt="Знак">
+        <img src="img\signs\3_27.svg" class="tooltip" data-hint="Остановка запрещена" alt="Знак">
+        <img src="img\signs\3_28.svg" class="tooltip" data-hint="Стоянка запрещена" alt="Знак">
+    </p>
+    <script>
+    $(function () {
+        $(document).tooltip({
+            items: "img",
+            content: function () {
+                var $element = $(this);
+                if ($element.is("img")) {
+                    return $element.data('hint');
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</html>
