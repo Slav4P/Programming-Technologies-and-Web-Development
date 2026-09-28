@@ -1,0 +1,116 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 16px 40px;
+    background: #0d75ec;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffd166;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 32px;
+    padding: 40px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d75ec;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 12px;
+    background: #0d75ec;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #0a5bc4;
+}
+
+.sidebar {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.footer {
+    background: #1f2937;
+    color: #ffffff;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.product-card::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, #0d75ec, #ffd166);
+    margin-top: 16px;
+    border-radius: 2px;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ТехноМаркет - интернет-магазин техники</title>
+    <title>FirePrice - интернет-магазин с выгодными предложениями</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,6 +22,7 @@
             <a href="">Корзина</a>
         </div>
     </header>
+
     <nav class="main-nav">
         <ul>
             <li><a href="">Главная</a></li>
@@ -32,13 +33,14 @@
             <li><a href="">Дополнительная информация</a></li>
         </ul>
     </nav>
+
     <main class="main">
         <section class="catalog">
             <h1>Товары со скидкой</h1>
 
             <article class="product-card">
                 <img src="images/iphone.webp">
-                <h2>Apple iPhone 17 pro Max</h2>
+                <h2>Смартфон Apple iPhone 17 pro Max</h2>
                 <p>6.9"|256 ГБ|Синий|5G</p>
                 <p class="price">116 372 ₽ <s>132 242 ₽</s></p>
                 <button type="button">В корзину</button>
@@ -46,20 +48,73 @@
 
             <article class="product-card">
                 <img src="images/honor.webp">
-                <h2>HONOR MagicBook X16 AMD 2025</h2>
+                <h2>Ноутбук HONOR MagicBook X16 AMD 2025</h2>
                 <p>16"|AMD Ryzen 5 6600H|16 ГБ|512 ГБ</p>
                 <p class="price">116 372 ₽ <s>132 242 ₽</s></p>
                 <button type="button">В корзину</button>
             </article>
 
             <article class="product-card">
-                <img>
-                <h2></h2>
-                <p></p>
-                <p class="price">116 372 ₽ <s>132 242 ₽</s></p>
+                <img src="images/samsung.webp">
+                <h2>Планшет Samsung Galaxy Tab S11 Ultra</h2>
+                <p>14.6"|512 ГБ|5G|120 Гц</p>
+                <p class="price">147 023 ₽ <s>198 145 ₽</s></p>
                 <button type="button"></button>
             </article>
         </section>
+        
+        <aside class="sidebar">
+            <form class="filter" action="" method="get">
+                <h2>Фильтры</h2>
+                <fieldset>
+                    <legend>Категории</legend>
+                    <label><input type="checkbox" name="category" value="notebooks"> Ноутбуки</label>
+                    <label><input type="checkbox" name="category" value="phones"> Смартфоны</label>
+                    <label><input type="checkbox" name="category" value="accessories"> Аксессуары</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Цена</legend>
+                    <label for="price-from">от</label>
+                    <input type="number" id="price-from" name="price-from" min="0">
+                    <label for="price-to">до</label>
+                    <input type="number" id="price-to" name="price-to" max="200000">
+                    <button type="submit">Применить фильтры</button>
+                </fieldset>
+            </form>
+
+            <section class="cart">
+                <h2>Ваша корзина</h2>
+                <ul>
+                    <li>Смартфон Samsung Galaxy S24 — 69 990 ₽</li>
+                    <li>Наушники Sony WH-1000XM5 — 29 990 ₽</li>
+                </ul>
+                <p class="cart-total">Итого: 99 980 ₽</p>
+                <button type="button">Оформить заказ</button>
+            </section>
+        </aside>
     </main>
+
+     <footer class="footer">
+        <section class="footer-contacts">
+            <h2>Контакты</h2>
+            <address>
+                <p>Москва, ул. Бронная, 28</p>
+                <p>Телефон: +7 (992) 321-65-80</p>
+                <p>Email: fireprice.ru</p>
+            </address>
+        </section>
+
+        <section class="footer-links">
+            <h2>Покупателям</h2>
+            <ul>
+                <li><a href="">Доставка и оплата</a></li>
+                <li><a href="">Возврат товара</a></li>
+                <li><a href="">Гарантия</a></li>
+            </ul>
+        </section>
+
+        <p class="copyright">© 2026 FirePrice. Все права защищены.</p>
+    </footer>
 </body>
 </html>
