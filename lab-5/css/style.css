@@ -19,12 +19,55 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}
+
+.search{
+    display:flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search input{
+    width: 450px;
+    padding: 8px 12px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search button{
+    padding: 8px 16px;
+    background: #FF7E05;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.user-actions{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold; 
+    gap: 5px;
+}
+
 .main-nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
     padding: 16px 40px;
-    background: #0d75ec;
+    background: #FF7E05;
 }
 
 .main-nav a {
@@ -58,20 +101,24 @@ body {
 }
 
 .product-card img {
-    width: 100%;
+    width: 80px;
     border-radius: 8px;
+}
+
+.product-card .old-price{
+    color: #FF0000;
 }
 
 .product-card .price {
     font-size: 20px;
     font-weight: bold;
-    color: #0d75ec;
+    color:  #07C700;
 }
 
 .product-card button {
     width: 100%;
     padding: 12px;
-    background: #0d75ec;
+    background: #FF7E05;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -80,7 +127,7 @@ body {
 }
 
 .product-card button:hover {
-    background: #0a5bc4;
+    background: #07C700;
 }
 
 .sidebar {
@@ -88,6 +135,20 @@ body {
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.category{
+    display: flex;
+    align-items: column;
+}
+
+.category label{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar fieldset{
+    height: 100px;
 }
 
 .footer {
@@ -110,7 +171,7 @@ body {
     content: "";
     display: block;
     height: 2px;
-    background: linear-gradient(to right, #0d75ec, #ffd166);
+    background: linear-gradient(to right, #FF7E05, #ffd166);
     margin-top: 16px;
     border-radius: 2px;
 }
