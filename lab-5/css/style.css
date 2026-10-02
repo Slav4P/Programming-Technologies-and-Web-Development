@@ -14,9 +14,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 15px 40px;
     background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #ffffff;
 }
 
 .logo{
@@ -57,9 +57,28 @@ body {
 
 .user-actions{
     display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+action-item {
+    display: flex;
     flex-direction: column;
-    font-weight: bold; 
-    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.action-item:hover {
+    color: orange;
+}
+
+.action-item .icon {
+    font-size: 20px;
 }
 
 .user-actions img{
