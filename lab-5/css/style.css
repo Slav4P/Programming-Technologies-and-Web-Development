@@ -11,12 +11,19 @@ body {
 }
 
 .header {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%; 
+}
+
+.header-container {
+    max-width: 1600px;         
+    width: 100%;
+    margin: 0 auto;            
+    padding: 20px 40px;        
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #eef2f5;
+    justify-content: space-between; 
 }
 
 .logo{
@@ -105,12 +112,22 @@ action-item {
     display: block;
 }
 
+.main-nav {
+    background: #FF7E05;       
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1600px;         
+    width: 100%;
+    margin: 0 auto;            
+}
+
 .main-nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
-    padding: 16px 40px;
-    background: #FF7E05;
+    padding: 16px 40px;       
 }
 
 .main-nav a {
