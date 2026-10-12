@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundBoard - Музыкальный плеер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-icon"><img src="images/logo.svg"></span> SoundBoard
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Главная</a>
+            <a href="#">Подкасты</a>
+            <a href="#">Плейлисты</a>
+            <a href="#">Жанры</a>
+            <a href="#">Радио</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск треков...">
+            <button class="btn-search">Найти</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <section class="promo-banner">
+            <div class="promo-banner-content">
+                <span class="badge">НОВЫЙ АЛЬБОМ</span>
+                <h1>Гармония в каждом дне</h1>
+                <p>Погрузитесь в атмосферу современного звучания. 12 треков, которые вдохновляют.</p>
+                <div class="banner-buttons">
+                    <button class="btn-primary" tabindex="0">▶ Слушать сейчас</button>
+                    <button class="btn-secondary" tabindex="0">♡ Добавить в библиотеку</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-layout">
+            
+            <section class="tracks-section">
+                <div class="section-header">
+                    <h2>Популярные треки</h2>
+                    <a href="#" class="see-all">Смотреть все →</a>
+                </div>
+                
+                <div class="tracks-grid">
+                    <div class="track-card" tabindex="0">
+                        <div class="track-cover-wrapper">
+                            <div class="track-cover-placeholder"></div>
+                            <button class="card-play-btn" tabindex="0">▶</button>
+                        </div>
+                        <div class="track-info">
+                            <h3>На высоте</h3>
+                            <p>Лёша Свик</p>
+                        </div>
+                        <div class="track-audio-control">
+                            <div class="mini-progress-bar" tabindex="0">
+                                <div class="mini-progress-fill animated-progress"></div>
+                            </div>
+                            <div class="track-time">
+                                <span>0:00</span>
+                                <span>3:28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-card" tabindex="0">
+                        <div class="track-cover-wrapper">
+                            <div class="track-cover-placeholder"></div>
+                            <button class="card-play-btn" tabindex="0">▶</button>
+                        </div>
+                        <div class="track-info">
+                            <h3>Город и мы</h3>
+                            <p>Zivert</p>
+                        </div>
+                        <div class="track-audio-control">
+                            <div class="mini-progress-bar" tabindex="0">
+                                <div class="mini-progress-fill"></div>
+                            </div>
+                            <div class="track-time">
+                                <span>0:00</span>
+                                <span>3:28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-card" tabindex="0">
+                        <div class="track-cover-wrapper">
+                            <div class="track-cover-placeholder"></div>
+                            <button class="card-play-btn" tabindex="0">▶</button>
+                        </div>
+                        <div class="track-info">
+                            <h3>Бесконечность</h3>
+                            <p>Dabro</p>
+                        </div>
+                        <div class="track-audio-control">
+                            <div class="mini-progress-bar" tabindex="0">
+                                <div class="mini-progress-fill"></div>
+                            </div>
+                            <div class="track-time">
+                                <span>0:00</span>
+                                <span>3:28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-card" tabindex="0">
+                        <div class="track-cover-wrapper">
+                            <div class="track-cover-placeholder"></div>
+                            <button class="card-play-btn" tabindex="0">▶</button>
+                        </div>
+                        <div class="track-info">
+                            <h3>Тише</h3>
+                            <p>JONY</p>
+                        </div>
+                        <div class="track-audio-control">
+                            <div class="mini-progress-bar" tabindex="0">
+                                <div class="mini-progress-fill"></div>
+                            </div>
+                            <div class="track-time">
+                                <span>0:00</span>
+                                <span>3:40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar-playlist">
+                <div class="sidebar-header">
+                    <h2>Мой плейлист</h2>
+                    <button class="btn-add-playlist" tabindex="0">+</button>
+                </div>
+                <ul class="playlist-tracks">
+                    <li class="playlist-item" tabindex="0">
+                        <div class="mini-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Летний дождь</h4>
+                            <p>Моя Мишель</p>
+                        </div>
+                        <span class="like-icon">💖</span>
+                        <span class="playlist-time">3:24</span>
+                    </li>
+                    <li class="playlist-item" tabindex="0">
+                        <div class="mini-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Сияй</h4>
+                            <p>Niletto</p>
+                        </div>
+                        <span class="like-icon">♡</span>
+                        <span class="playlist-time">2:48</span>
+                    </li>
+                    <li class="playlist-item" tabindex="0">
+                        <div class="mini-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Планы на завтра</h4>
+                            <p>Три дня дождя</p>
+                        </div>
+                        <span class="like-icon">💖</span>
+                        <span class="playlist-time">3:12</span>
+                    </li>
+                    <li class="playlist-item" tabindex="0">
+                        <div class="mini-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Космос внутри</h4>
+                            <p>Zivert</p>
+                        </div>
+                        <span class="like-icon">♡</span>
+                        <span class="playlist-time">3:41</span>
+                    </li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <footer class="player-panel">
+            <div class="player-track-info">
+                <div class="player-mini-cover" style="background-image: url('images/player-cover.png');"></div>
+                <div class="player-text">
+                    <h4>Летний дождь</h4>
+                    <p>Моя Мишель</p>
+                </div>
+                <button class="btn-heart-active" tabindex="0">💖</button>
+            </div>
+
+            <div class="player-controls-block">
+                <div class="player-buttons">
+                    <button class="btn-icon" tabindex="0" title="Перемешать">🔀</button>
+                    <button class="btn-icon" tabindex="0" title="Назад">⏮</button>
+                    <button class="btn-play-pause" tabindex="0" title="Пауза">⏸</button>
+                    <button class="btn-icon" tabindex="0" title="Вперед">⏭</button>
+                    <button class="btn-icon" tabindex="0" title="Повторить">🔁</button>
+                </div>
+                <div class="player-progress-container">
+                    <span class="player-time">1:24</span>
+                    <div class="player-progress-bar" tabindex="0">
+                        <div class="player-progress-fill"></div>
+                    </div>
+                    <span class="player-time">3:24</span>
+                </div>
+            </div>
+
+            <div class="player-volume-block">
+                <button class="btn-icon" tabindex="0">🔊</button>
+                <div class="player-volume-bar" tabindex="0">
+                    <div class="player-volume-fill"></div>
+                </div>
+                <button class="btn-icon" tabindex="0" title="Очередь">📋</button>
+            </div>
+        </footer>
+
+        <section class="selections-section">
+            <div class="section-header">
+                <h2>Подборки для вас</h2>
+                <a href="#" class="see-all">Смотреть все →</a>
+            </div>
+            
+            <div class="selections-grid">
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select1.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Осеннее настроение</h3>
+                        <p>32 трека</p>
+                    </div>
+                </div>
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select2.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Утро с музыкой</h3>
+                        <p>28 треков</p>
+                    </div>
+                </div>
+
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select3.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Энергия дня</h3>
+                        <p>45 треков</p>
+                    </div>
+                </div>
+                
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select4.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Ретро-хиты</h3>
+                        <p>56 треков</p>
+                    </div>
+                </div>
+              
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select5.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Вечерний chill</h3>
+                        <p>40 треков</p>
+                    </div>
+                </div>
+              
+                <div class="selection-card" tabindex="0">
+                    <div class="selection-cover" style="background-image: url('images/select6.png');">
+                        <button class="selection-play-btn" tabindex="0">▶</button>
+                    </div>
+                    <div class="selection-info">
+                        <h3>Путешествия</h3>
+                        <p>38 треков</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="footer-logo-icon"><img src="images/logo.svg"></span> SoundWave
+                </div>
+                <p class="footer-tagline">Музыка всегда с тобой</p>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4>О сервисе</h4>
+                <ul>
+                    <li><a href="#">Возможности</a></li>
+                    <li><a href="#">Подписка</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Пользователям</h4>
+                <ul>
+                    <li><a href="#">Плейлисты</a></li>
+                    <li><a href="#">Радио</a></li>
+                    <li><a href="#">Мобильное приложение</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials-column">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">VK</a>
+                    <a href="#" class="social-icon">TG</a>
+                    <a href="#" class="social-icon">YT</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+
+            <div class="footer-status-column">
+                <span class="status-text">Музыка объединяет <span class="heart-pulse">💖</span></span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 SoundWave. Все права защищены.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

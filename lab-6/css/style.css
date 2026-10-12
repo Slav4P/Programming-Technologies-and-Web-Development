@@ -1,0 +1,545 @@
+:root {
+    --color-bg: #f8fafc;          
+    --color-surface: #ffffff;     
+    --color-primary: #4f46e5;    
+    --color-accent: #db2777;     
+    --color-text: #0f172a;        
+    --color-text-muted: #64748b;  
+    --gradient-banner: linear-gradient(90deg, #ffffff 0%, #f1f5f9 50%, rgba(241,245,249,0.3) 80%, transparent 100%);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: var(--color-text);
+}
+
+.search-box input {
+    padding: 8px 16px;
+    border-radius: 20px 0 0 20px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    outline: none;
+}
+
+.btn-search {
+    padding: 8px 16px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: var(--color-primary);
+    color: white;
+    cursor: pointer;
+}
+
+.promo-banner {
+    background: var(--gradient-banner), url("../images/promo.png") no-repeat right center / contain;
+    background-color: #ffffff;
+    color: #0f172a; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 40px;  
+    height: 240px;       
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    overflow: hidden;    
+    box-sizing: border-box;
+}
+
+.promo-banner {
+    position: relative;
+}
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--color-accent), transparent);
+    opacity: 0.15;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.promo-banner-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.promo-banner-content h1 { margin: 4px 0; font-size: 28px; }
+.promo-banner-content p { color: var(--color-text-muted); margin: 0 0 12px 0; font-size: 14px; }
+
+.badge {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.banner-buttons { display: flex; gap: 12px; }
+.banner-buttons button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary { background: linear-gradient(90deg, var(--color-accent), var(--color-primary)); color: white; }
+.btn-secondary { background: rgba(255, 0, 0, 0.767); color: white; border: 1px solid rgba(255,255,255,0.2) !important; }
+
+.banner-buttons button:hover, .banner-buttons button:focus {
+    outline: none;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px; 
+    gap: 24px;
+    align-items: start;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.see-all { color: var(--color-text-muted); text-decoration: none; font-size: 13px; }
+.see-all:hover { color: white; }
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 16px;
+}
+
+.track-card {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.track-card:hover, .track-card:focus {
+    outline: none;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 0 2px var(--color-primary);
+}
+
+.track-cover-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.track-cover-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #334155, #475569);
+}
+
+.card-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 40px; height: 40px;
+    border-radius: 50%; border: none;
+    background: var(--color-primary);
+    color: white; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.track-card:hover .card-play-btn, .track-card:focus .card-play-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.track-info h3 { font-size: 14px; margin: 0 0 4px 0; color: var(--color-text); }
+.track-info p { font-size: 12px; margin: 0 0 12px 0; color: var(--color-text-muted); }
+
+.track-audio-control {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mini-progress-bar {
+    width: 100%; height: 4px;
+    background: #334155; border-radius: 2px;
+    position: relative; cursor: pointer;
+}
+
+.mini-progress-fill {
+    width: 25%; height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: 2px;
+}
+
+.animated-progress {
+    animation: playProgress 8s linear infinite alternate;
+}
+
+.track-time {
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: var(--color-text-muted);
+}
+
+.sidebar-playlist {
+    background: var(--color-surface);
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px;
+}
+.sidebar-header h2 { font-size: 16px; margin: 0; }
+.btn-add-playlist {
+    background: rgba(255,255,255,0.1); border: none; color: white;
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+    font-size: 16px; display: flex; align-items: center; justify-content: center;
+}
+.btn-add-playlist:hover { background: rgba(255,255,255,0.2); }
+
+.playlist-tracks {
+    list-style: none; /* Убрали точки маркеров */
+    padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 12px;
+}
+
+.playlist-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px; border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.playlist-item:hover, .playlist-item:focus {
+    background: rgba(255, 255, 255, 0.05);
+    outline: none;
+}
+
+.mini-cover {
+    width: 40px; height: 40px; border-radius: 6px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+}
+
+.player-panel {
+    background-color: #1e293b; /* Темный фон панели */
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.player-track-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 220px;
+}
+
+.player-mini-cover {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #475569;
+    background-size: cover;
+    background-position: center;
+}
+
+.player-text h4 { margin: 0 0 4px 0; font-size: 15px; color: #ffffff; }
+.player-text p { margin: 0; font-size: 12px; color: #94a3b8; }
+.btn-heart-active { background: none; border: none; font-size: 16px; cursor: pointer; }
+
+.player-controls-block {
+    flex-grow: 1;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+.btn-icon:hover, .btn-icon:focus { color: #ffffff; transform: scale(1.1); outline: none; }
+
+.btn-play-pause {
+    background: #ffffff;
+    color: #1e293b;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    /* Пульсирующая анимация по keyframes из задания */
+    animation: pulsePlayButton 2.5s infinite;
+}
+.btn-play-pause:hover, .btn-play-pause:focus { transform: scale(1.1); outline: none; }
+
+.player-progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.player-time { font-size: 12px; color: #94a3b8; min-width: 30px; }
+
+.player-progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background: #475569;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+.player-progress-bar:focus { outline: 1px solid #ffffff; }
+
+.player-progress-fill {
+    width: 42%; /* Имитация текущего прогресса */
+    height: 100%;
+    background: linear-gradient(90deg, #ec4899, #6366f1);
+    border-radius: 3px;
+    position: relative;
+}
+/* Белый ползунок-кружок (выполнен псевдоэлементом ::after по заданию) */
+.player-progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.player-volume-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 160px;
+}
+.player-volume-bar { width: 80px; height: 4px; background: #475569; border-radius: 2px; cursor: pointer; }
+.player-volume-fill { width: 70%; height: 100%; background: #ffffff; border-radius: 2px; }
+
+/* ================= СТИЛИ ДЛЯ СЕКЦИИ ПОДБОРОК = "ПОДБОРКИ ДЛЯ ВАС" ================= */
+.selections-section {
+    margin-bottom: 40px;
+}
+
+.selections-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Ровно 6 колонок под макет */
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.selection-card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+/* Ховер эффекты без изменения размеров сетки (из условий варианта) */
+.selection-card:hover, .selection-card:focus {
+    outline: none;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3), 0 0 0 2px #6366f1;
+}
+
+.selection-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    background-color: #334155;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+/* Кнопка Play по центру карточки при наведении */
+.selection-play-btn {
+    position: absolute;
+    bottom: 10px; right: 10px;
+    width: 36px; height: 36px;
+    border-radius: 50%; border: none;
+    background: #6366f1; color: white;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.2s, transform 0.2s;
+}
+.selection-card:hover .selection-play-btn, .selection-card:focus .selection-play-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+.selection-play-btn:hover { background: #4f46e5; transform: scale(1.1) !important; }
+
+.selection-info h3 { font-size: 14px; margin: 0 0 4px 0; color: #ffffff; }
+.selection-info p { font-size: 12px; margin: 0; color: #94a3b8; }
+
+.footer-logo img {
+    height: 35px;
+}
+
+.site-footer {
+    background-color: #f8fafc; 
+    color: #334155;
+    padding: 40px 60px 20px 60px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.footer-brand { min-width: 180px; }
+.footer-logo { font-size: 20px; font-weight: bold; color: #0f172a; margin-bottom: 6px; }
+.footer-tagline { color: #64748b; margin: 0; font-size: 13px; }
+
+.footer-links-column h4, .footer-socials-column h4 {
+    font-size: 14px; color: #0f172a; margin: 0 0 12px 0; font-weight: bold;
+}
+.footer-links-column ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.footer-links-column a { color: #64748b; text-decoration: none; transition: color 0.2s; }
+.footer-links-column a:hover { color: #0f172a; }
+
+.social-icons { display: flex; gap: 12px; }
+.social-icon {
+    width: 32px; height: 32px; border-radius: 50%; background: #e2e8f0;
+    display: flex; align-items: center; justify-content: center;
+    color: #334155; text-decoration: none; font-size: 12px; font-weight: bold;
+    transition: background 0.2s;
+}
+.social-icon:hover { background: #cbd5e1; }
+
+.footer-status-column {
+    display: flex; align-items: center; font-weight: bold; color: #0f172a;
+}
+.heart-pulse { display: inline-block; margin-left: 6px; color: #ec4899; }
+
+.footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #64748b;
+}
+.footer-bottom p { margin: 0; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: #64748b; text-decoration: none; }
+.footer-bottom-links a:hover { color: #0f172a; }
+
+.playlist-info { flex-grow: 1; }
+.playlist-info h4 { font-size: 13px; margin: 0 0 2px 0; color: var(--color-text); }
+.playlist-info p { font-size: 11px; margin: 0; color: var(--color-text-muted); }
+
+.like-icon { font-size: 12px; cursor: pointer; color: var(--color-text-muted); }
+.playlist-item:hover .like-icon { color: var(--color-accent); }
+.playlist-time { font-size: 11px; color: var(--color-text-muted); min-width: 30px; text-align: right; }
+
+@keyframes pulsePlayButton {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+@keyframes playProgress {
+    0% { width: 10%; }
+    100% { width: 90%; }
+}
