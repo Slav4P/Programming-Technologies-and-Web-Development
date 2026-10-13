@@ -170,6 +170,12 @@ body {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
 }
 
+.track-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .track-card:hover, .track-card:focus {
     outline: none;
     transform: translateY(-4px) scale(1.02);
@@ -241,6 +247,13 @@ body {
     font-size: 10px; color: var(--color-text-muted);
 }
 
+.playlist-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 6px; 
+}
+
 .sidebar-playlist {
     background: var(--color-surface);
     border-radius: 16px;
@@ -261,7 +274,7 @@ body {
 .btn-add-playlist:hover { background: rgba(255,255,255,0.2); }
 
 .playlist-tracks {
-    list-style: none; /* Убрали точки маркеров */
+    list-style: none; 
     padding: 0; margin: 0;
     display: flex; flex-direction: column; gap: 12px;
 }
@@ -282,8 +295,15 @@ body {
     background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
 }
 
+.player-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
 .player-panel {
-    background-color: #1e293b; /* Темный фон панели */
+    background-color: #1e293b; 
     border-radius: 16px;
     padding: 20px 30px;
     display: flex;
@@ -351,7 +371,6 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s;
-    /* Пульсирующая анимация по keyframes из задания */
     animation: pulsePlayButton 2.5s infinite;
 }
 .btn-play-pause:hover, .btn-play-pause:focus { transform: scale(1.1); outline: none; }
@@ -375,13 +394,13 @@ body {
 .player-progress-bar:focus { outline: 1px solid #ffffff; }
 
 .player-progress-fill {
-    width: 42%; /* Имитация текущего прогресса */
+    width: 42%; 
     height: 100%;
     background: linear-gradient(90deg, #ec4899, #6366f1);
     border-radius: 3px;
     position: relative;
 }
-/* Белый ползунок-кружок (выполнен псевдоэлементом ::after по заданию) */
+
 .player-progress-fill::after {
     content: '';
     position: absolute;
@@ -404,14 +423,13 @@ body {
 .player-volume-bar { width: 80px; height: 4px; background: #475569; border-radius: 2px; cursor: pointer; }
 .player-volume-fill { width: 70%; height: 100%; background: #ffffff; border-radius: 2px; }
 
-/* ================= СТИЛИ ДЛЯ СЕКЦИИ ПОДБОРОК = "ПОДБОРКИ ДЛЯ ВАС" ================= */
 .selections-section {
     margin-bottom: 40px;
 }
 
 .selections-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Ровно 6 колонок под макет */
+    grid-template-columns: repeat(6, 1fr); 
     gap: 16px;
     margin-top: 16px;
 }
@@ -426,7 +444,6 @@ body {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
 }
 
-/* Ховер эффекты без изменения размеров сетки (из условий варианта) */
 .selection-card:hover, .selection-card:focus {
     outline: none;
     transform: translateY(-5px);
@@ -444,7 +461,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* Кнопка Play по центру карточки при наведении */
 .selection-play-btn {
     position: absolute;
     bottom: 10px; right: 10px;
