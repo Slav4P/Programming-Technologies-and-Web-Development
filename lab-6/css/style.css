@@ -25,11 +25,24 @@ body {
 
 .site-header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid #e2e8f0;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;      
+    margin: 0 auto;        
+    padding: 0 20px;        
+    box-sizing: border-box;  
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -152,7 +165,7 @@ body {
     margin-bottom: 16px;
 }
 .see-all { color: var(--color-text-muted); text-decoration: none; font-size: 13px; }
-.see-all:hover { color: white; }
+.see-all:hover { color: #4f46e5; }
 
 .tracks-grid {
     display: grid;
@@ -486,21 +499,41 @@ body {
 }
 
 .site-footer {
+    width: 100%;
     background-color: #f8fafc; 
-    color: #334155;
-    padding: 40px 60px 20px 60px;
     border-top: 1px solid #e2e8f0;
-    font-size: 14px;
+    padding: 40px 0 20px 0;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;      
+    margin: 0 auto;         
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;  
 }
 
 .footer-top {
+    width: 100%;            
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap;         
     gap: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.footer-bottom {
+    width: 100%;            
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .footer-brand { min-width: 180px; }
