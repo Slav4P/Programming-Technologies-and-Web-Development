@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWay - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">FitWay</div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Тренировки</a>
+                <a href="#">Питание</a>
+                <a href="#">Прогресс</a>
+                <a href="#">Тарифы</a>
+            </nav>
+            <div class="header-controls">
+                <div class="theme-toggle">
+                    <button class="toggle-btn active" id="view-desktop">Desktop</button>
+                    <button class="toggle-btn" id="view-mobile">Mobile</button>
+                </div>
+                <button class="btn-login" tabindex="0">Войти</button>
+                <button class="btn-cta" tabindex="0">Начать бесплатно</button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="dashboard-grid" id="dashboard">
+
+        <section class="db-block profile-block">
+            <div class="profile-card">
+                <div class="profile-avatar" style="background-image: url('images/avatar.jpg');"></div>
+                <div class="profile-info">
+                    <h2>Константин В.</h2>
+                    <p class="profile-status">Премиум аккаунт</p>
+                    <p class="profile-phrase">«Лучшая версия начинается сегодня»</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="db-block stats-block">
+            <div class="stats-grid">
+                <div class="stat-card" tabindex="0">
+                    <span class="stat-icon">🏋️‍♂️</span>
+                    <div class="stat-data">
+                        <h3>10 000+</h3>
+                        <p>Тренировки</p>
+                    </div>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <span class="stat-icon">🔥</span>
+                    <div class="stat-data">
+                        <h3>500+</h3>
+                        <p>Калории</p>
+                    </div>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <span class="stat-icon">⚡</span>
+                    <div class="stat-data">
+                        <h3>4.9</h3>
+                        <p>Активность</p>
+                    </div>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <span class="stat-icon">🎯</span>
+                    <div class="stat-data">
+                        <h3>85%</h3>
+                        <p>Прогресс</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="db-block current-workout-block">
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="badge">ТЕКУЩАЯ ТРЕНИРОВКА</span>
+                    <h3>Силовые тренировки</h3>
+                </div>
+                <p class="workout-desc">Эффективные комплексы для всего тела. Развитие силы и выносливости.</p>
+                <div class="workout-meta">
+                    <span>⏱ 30 мин</span>
+                    <span>📊 Средний уровень</span>
+                </div>
+                <button class="btn-workout-action" tabindex="0">Продолжить тренировку</button>
+            </div>
+        </section>
+
+        <section class="db-block schedule-block">
+            <h3>Расписание</h3>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <div class="schedule-date">ПН, 08:30</div>
+                    <div class="schedule-name">Йога & Гибкость</div>
+                </li>
+                <li class="schedule-item">
+                    <div class="schedule-date">СР, 19:00</div>
+                    <div class="schedule-name">Кардио интенсив</div>
+                </li>
+                <li class="schedule-item">
+                    <div class="schedule-date">ПТ, 10:00</div>
+                    <div class="schedule-name">Силовой комплекс</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="db-block recommendations-block">
+            <h3>Рекомендации от профессионалов</h3>
+            <div class="rec-cards">
+                <div class="rec-card" tabindex="0">
+                    <h4>Планы питания</h4>
+                    <p>Сбалансированное меню на каждый день.</p>
+                </div>
+                <div class="rec-card" tabindex="0">
+                    <h4>Забота о здоровье</h4>
+                    <p>Восстановление и сон после нагрузок.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-copy">© 2026 FitWay. Все права защищены.</p>
+            <nav class="footer-nav">
+                <a href="#">Прогресс</a>
+                <a href="#">Тарифы</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="#" class="social-link">VK</a>
+                <a href="#" class="social-link">TG</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnDesktop = document.getElementById('view-desktop');
+        const btnMobile = document.getElementById('view-mobile');
+        const dashboard = document.getElementById('dashboard');
+
+        btnDesktop.addEventListener('click', () => {
+            btnDesktop.classList.add('active');
+            btnMobile.classList.remove('active');
+            dashboard.classList.remove('force-mobile');
+        });
+
+        btnMobile.addEventListener('click', () => {
+            btnMobile.classList.add('active');
+            btnDesktop.classList.remove('active');
+            dashboard.classList.add('force-mobile');
+        });
+    </script>
+</body>
+</html>
