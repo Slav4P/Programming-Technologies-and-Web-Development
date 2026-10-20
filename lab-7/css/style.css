@@ -1,10 +1,11 @@
 :root {
-    --color-bg: #f8fafc;         
-    --color-surface: #ffffff;     
-    --color-primary: #16a34a;     
-    --color-accent: #2563eb;    
-    --color-text: #0f172a;      
-    --color-text-muted: #64748b;  
+    --color-bg: #050811;          
+    --color-surface: #0f172a;    
+    --color-primary: #00ff87;    
+    --color-accent: #ff0055;
+    --color-text: #ffffff;       
+    --color-text-muted: #94a3b8;  
+    
     --border-radius: 16px;
     --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -22,9 +23,8 @@ body {
 }
 
 .site-header {
-    width: 100%;
-    background-color: var(--color-surface);
-    border-bottom: 1px solid #e2e8f0;
+    background-color: #090d16;   
+    border-bottom: 1px solid #1e293b;
 }
 
 .header-container {
@@ -38,9 +38,9 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    color: var(--color-primary); 
+    font-size: 22px;
     font-weight: 800;
-    color: var(--color-primary);
 }
 
 .nav-menu {
@@ -67,10 +67,11 @@ body {
 
 .theme-toggle {
     display: flex;
-    background: #e2e8f0;
+    background: #1e293b;
     padding: 2px;
     border-radius: 20px;
     margin-right: 12px;
+    border: 1px solid #334155;
 }
 
 .toggle-btn {
@@ -85,14 +86,14 @@ body {
 }
 
 .toggle-btn.active {
-    background: var(--color-surface);
-    color: var(--color-text);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: var(--color-primary);
+    color: #000000;            
 }
 
 .btn-login {
     background: none;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #334155;
+    color: var(--color-text);
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
@@ -101,15 +102,17 @@ body {
 
 .btn-cta {
     background: var(--color-primary);
-    color: white;
+    color: #000000;          
     border: none;
     padding: 8px 18px;
     border-radius: 20px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition-fast);
 }
-.btn-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3); }
+.btn-cta:hover { 
+    background-color: #00cc6c;  
+}
 
 .main-container {
     max-width: 1200px;
@@ -135,8 +138,8 @@ body {
     background-color: var(--color-surface);
     border-radius: var(--border-radius);
     padding: 24px;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #1e293b;   
 }
 
 .profile-block       { grid-area: profile; }
@@ -155,12 +158,14 @@ body {
 .profile-avatar {
     width: 80px; height: 80px;
     border-radius: 50%;
+    background-color: #1e293b;
+    border: 2px solid var(--color-primary); 
     background-size: cover;    
     background-position: center;  
     background-repeat: no-repeat;
 }
 .profile-info h2 { margin: 0; font-size: 20px; }
-.profile-status { font-size: 13px; color: var(--color-primary); font-weight: 600; margin: 0; }
+.profile-status { font-size: 13px; color: var(--color-primary); font-weight: 700; margin: 0; }
 .profile-phrase { font-style: italic; color: var(--color-text-muted); font-size: 13px; margin: 8px 0 0 0; }
 
 .stats-grid {
@@ -171,32 +176,32 @@ body {
     align-content: center;
 }
 .stat-card {
-    background-color: var(--color-bg);
+    background-color: #070b14;    
     border-radius: 12px;
     padding: 16px;
     display: flex;          
     align-items: center;
     gap: 12px;
+    border: 1px solid #1e293b;
     transition: var(--transition-fast);
     cursor: pointer;
 }
 .stat-card:hover, .stat-card:focus {
     outline: none;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transform: translateY(-3px);  
+    border-color: var(--color-primary);
 }
 .stat-icon { font-size: 24px; }
-.stat-data h3 { margin: 0 0 2px 0; font-size: 18px; font-weight: 700; }
+.stat-data h3 { margin: 0 0 2px 0; font-size: 20px; font-weight: 800; color: #ffffff; } 
 .stat-data p { margin: 0; font-size: 12px; color: var(--color-text-muted); }
 
-/* Текущая тренировка */
 .workout-card {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 .badge {
-    font-size: 11px; font-weight: 700; color: var(--color-accent);
+    font-size: 11px; font-weight: 800; color: var(--color-accent);
     letter-spacing: 1px;
 }
 .workout-card h3 { margin: 0; font-size: 22px; }
@@ -204,37 +209,40 @@ body {
 .workout-meta { display: flex; gap: 16px; font-size: 13px; color: var(--color-text-muted); font-weight: 500; }
 .btn-workout-action {
     align-self: flex-start;
-    background-color: var(--color-text);
-    color: white; border: none;
+    background-color: var(--color-primary);
+    color: #000000; 
+    border: none;
     padding: 10px 20px; border-radius: 8px;
-    cursor: pointer; font-weight: 600;
+    cursor: pointer; font-weight: 700;
     transition: var(--transition-fast);
 }
-.btn-workout-action:hover { background-color: var(--color-primary); }
+.btn-workout-action:hover { background-color: #00cc6c; }
 
-/* Расписание */
 .schedule-list { list-style: none; padding: 0; margin: 16px 0 0 0; display: flex; flex-direction: column; gap: 12px; }
 .schedule-item {
-    padding: 12px; border-left: 4px solid var(--color-accent);
-    background-color: var(--color-bg); border-radius: 0 8px 8px 0;
+    padding: 12px; border-left: 4px solid var(--color-accent); 
+    background-color: #070b14; border-radius: 0 8px 8px 0;
+    border-top: 1px solid #1e293b;
+    border-right: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
 }
-.schedule-date { font-size: 11px; font-weight: 700; color: var(--color-accent); margin-bottom: 2px; }
+.schedule-date { font-size: 11px; font-weight: 800; color: var(--color-accent); margin-bottom: 2px; }
 .schedule-name { font-size: 14px; font-weight: 600; }
 
-/* Рекомендации */
 .recommendations-block h3 { margin: 0 0 16px 0; font-size: 16px; }
 .rec-cards { display: flex; gap: 16px; }
 .rec-card {
-    flex: 1; padding: 16px; background-color: var(--color-bg);
-    border-radius: 12px; cursor: pointer; transition: var(--transition-fast);
+    flex: 1; padding: 16px; background-color: #070b14;
+    border-radius: 12px; border: 1px solid #1e293b;
+    cursor: pointer; transition: var(--transition-fast);
 }
-.rec-card:hover { transform: translateY(-2px); }
-.rec-card h4 { margin: 0 0 4px 0; font-size: 14px; color: var(--color-primary); }
+.rec-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+.rec-card h4 { margin: 0 0 4px 0; font-size: 14px; color: var(--color-primary); font-weight: 700; }
 .rec-card p { margin: 0; font-size: 12px; color: var(--color-text-muted); }
 
 .site-footer {
-    background-color: var(--color-surface);
-    border-top: 1px solid #e2e8f0;
+    background-color: #090d16;
+    border-top: 1px solid #1e293b;
     padding: 24px 40px;
     margin-top: 40px;
 }
@@ -246,11 +254,12 @@ body {
     align-items: center;
 }
 .footer-copy { margin: 0; font-size: 13px; color: var(--color-text-muted); }
-.footer-nav { display: flex; gap: 20px; }
+.footer-nav { display: flex; gap: 24px; }
 .footer-nav a { text-decoration: none; color: var(--color-text-muted); font-size: 13px; }
-.footer-nav a:hover { color: var(--color-text); }
+.footer-nav a:hover { color: var(--color-primary); }
 .footer-socials { display: flex; gap: 12px; }
 .footer-socials a { text-decoration: none; color: var(--color-text); font-weight: bold; font-size: 13px; }
+.footer-socials a:hover { color: var(--color-primary); }
 
 @media (max-width: 768px) {
     .site-header {
@@ -266,7 +275,6 @@ body {
         padding: 0 16px;
     }
     
-
     .profile-block, .stats-block, .current-workout-block, .schedule-block, .recommendations-block {
         grid-area: auto;
     }
