@@ -3,158 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitWay - Личный кабинет</title>
+    <title>FitWay — Фитнес-приложение</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo">FitWay</div>
-            <nav class="nav-menu">
-                <a href="#" class="active">Тренировки</a>
-                <a href="#">Питание</a>
-                <a href="#">Прогресс</a>
-                <a href="#">Тарифы</a>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">FitWay</a>
+            <nav class="nav">
+                <a href="#" class="nav-link">Тренировки</a>
+                <a href="#" class="nav-link">Питание</a>
+                <a href="#" class="nav-link">Прогресс</a>
+                <a href="#" class="nav-link">Тарифы</a>
+                <a href="#" class="nav-link">Блог</a>
             </nav>
-            <div class="header-controls">
-                <div class="theme-toggle">
-                    <button class="toggle-btn active" id="view-desktop">Desktop</button>
-                    <button class="toggle-btn" id="view-mobile">Mobile</button>
-                </div>
-                <button class="btn-login" tabindex="0">Войти</button>
-                <button class="btn-cta" tabindex="0">Начать бесплатно</button>
+            <div class="header-buttons">
+                <a href="#" class="btn btn-secondary">Войти</a>
+                <a href="#" class="btn btn-primary">Начать бесплатно →</a>
             </div>
+    
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
+    <main class="container">
+        
 
-    <main class="dashboard-grid" id="dashboard">
+        <section class="hero-section">
+            <div class="hero-container-inner">
+                <div class="hero-content">
+                    <span class="badge">ЗДОРОВЬЕ • ДВИЖЕНИЕ • РЕЗУЛЬТАТ</span>
+                    <h1 class="hero-title">Лучшая версия<br>начинается<br>сегодня</h1>
+                    <p class="hero-description">Тренировки, планы питания и персональные<br>рекомендации — всё в одном приложении.</p>
+                    <a href="#" class="btn btn-primary">Начать бесплатно →</a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10 000+</span>
+                            <span class="stat-label">пользователей</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">тренировок</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Рейтинг в магазинах</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <span class="image-note note-hero">Сильнее с каждым днём! ♡</span>
+            </div>
+        </section>
 
-        <section class="db-block profile-block">
-            <div class="profile-card">
-                <div class="profile-avatar" style="background-image: url('images/avatar.jpg');"></div>
-                <div class="profile-info">
-                    <h2>Константин В.</h2>
-                    <p class="profile-status">Премиум аккаунт</p>
-                    <p class="profile-phrase">«Лучшая версия начинается сегодня»</p>
+
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Популярные тренировки</h2>
+                <a href="#" class="section-link">Смотреть все →</a>
+            </div>
+            <div class="workouts-grid">
+      
+                <div class="card workout-card">
+                    <div class="card-image-stub bg-img-1"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Силовые тренировки</h3>
+                        <p class="card-text">Эффективные комплексы для всего тела</p>
+                        <div class="card-meta">
+                            <span>🕒 30 мин</span>
+                            <span>📊 Средний</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card workout-card">
+                    <div class="card-image-stub bg-img-2"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Йога</h3>
+                        <p class="card-text">Гибкость, баланс и спокойствие</p>
+                        <div class="card-meta">
+                            <span>🕒 20 мин</span>
+                            <span>📊 Любой</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card workout-card">
+                    <div class="card-image-stub bg-img-3"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Кардио</h3>
+                        <p class="card-text">Сжигание калорий и выносливость</p>
+                        <div class="card-meta">
+                            <span>🕒 25 мин</span>
+                            <span>📊 Средний</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="db-block stats-block">
-            <div class="stats-grid">
-                <div class="stat-card" tabindex="0">
-                    <span class="stat-icon">🏋️‍♂️</span>
-                    <div class="stat-data">
-                        <h3>10 000+</h3>
-                        <p>Тренировки</p>
-                    </div>
+
+        <section class="section">
+            <h2 class="section-title text-center">Почему выбирают FitWay</h2>
+            <div class="features-grid">
+                <div class="card feature-card">
+                    <div class="feature-icon icon-green">🏋️</div>
+                    <h3 class="feature-title">Удобные тренировки</h3>
+                    <p class="feature-text">Занимайтесь где и когда удобно</p>
                 </div>
-                <div class="stat-card" tabindex="0">
-                    <span class="stat-icon">🔥</span>
-                    <div class="stat-data">
-                        <h3>500+</h3>
-                        <p>Калории</p>
-                    </div>
+                <div class="card feature-card">
+                    <div class="feature-icon icon-green">🥗</div>
+                    <h3 class="feature-title">Планы питания</h3>
+                    <p class="feature-text">Сбалансированное меню на каждый день</p>
                 </div>
-                <div class="stat-card" tabindex="0">
-                    <span class="stat-icon">⚡</span>
-                    <div class="stat-data">
-                        <h3>4.9</h3>
-                        <p>Активность</p>
-                    </div>
+                <div class="card feature-card">
+                    <div class="feature-icon icon-green">📊</div>
+                    <h3 class="feature-title">Отслеживание прогресса</h3>
+                    <p class="feature-text">Наглядная статистика и достижения</p>
                 </div>
-                <div class="stat-card" tabindex="0">
-                    <span class="stat-icon">🎯</span>
-                    <div class="stat-data">
-                        <h3>85%</h3>
-                        <p>Прогресс</p>
-                    </div>
+                <div class="card feature-card">
+                    <div class="feature-icon icon-green">🍏</div>
+                    <h3 class="feature-title">Забота о здоровье</h3>
+                    <p class="feature-text">Рекомендации от профессионалов</p>
                 </div>
             </div>
         </section>
 
-        <section class="db-block current-workout-block">
-            <div class="workout-card">
-                <div class="workout-header">
-                    <span class="badge">ТЕКУЩАЯ ТРЕНИРОВКА</span>
-                    <h3>Силовые тренировки</h3>
-                </div>
-                <p class="workout-desc">Эффективные комплексы для всего тела. Развитие силы и выносливости.</p>
-                <div class="workout-meta">
-                    <span>⏱ 30 мин</span>
-                    <span>📊 Средний уровень</span>
-                </div>
-                <button class="btn-workout-action" tabindex="0">Продолжить тренировку</button>
+
+        <section class="promo-section">
+            <div class="promo-content">
+                <h2 class="promo-title">Начните путь к лучшей версии себя</h2>
+                <p class="promo-text">7 дней бесплатного доступа ко всем возможностям</p>
+                <a href="#" class="btn btn-secondary promo-btn">Попробовать бесплатно</a>
             </div>
-        </section>
-
-        <section class="db-block schedule-block">
-            <h3>Расписание</h3>
-            <ul class="schedule-list">
-                <li class="schedule-item">
-                    <div class="schedule-date">ПН, 08:30</div>
-                    <div class="schedule-name">Йога & Гибкость</div>
-                </li>
-                <li class="schedule-item">
-                    <div class="schedule-date">СР, 19:00</div>
-                    <div class="schedule-name">Кардио интенсив</div>
-                </li>
-                <li class="schedule-item">
-                    <div class="schedule-date">ПТ, 10:00</div>
-                    <div class="schedule-name">Силовой комплекс</div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="db-block recommendations-block">
-            <h3>Рекомендации от профессионалов</h3>
-            <div class="rec-cards">
-                <div class="rec-card" tabindex="0">
-                    <h4>Планы питания</h4>
-                    <p>Сбалансированное меню на каждый день.</p>
-                </div>
-                <div class="rec-card" tabindex="0">
-                    <h4>Забота о здоровье</h4>
-                    <p>Восстановление и сон после нагрузок.</p>
+            <div class="promo-image-wrapper">
+                <div class="promo-image">
+                    <span class="image-note note-2">Движение вдохновляет! ♡</span>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-            <p class="footer-copy">© 2026 FitWay. Все права защищены.</p>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="#" class="logo">FitWay</a>
             <nav class="footer-nav">
-                <a href="#">Прогресс</a>
-                <a href="#">Тарифы</a>
-                <a href="#">Контакты</a>
+                <a href="#" class="footer-link">Тренировки</a>
+                <a href="#" class="footer-link">Питание</a>
+                <a href="#" class="footer-link">Прогресс</a>
+                <a href="#" class="footer-link">Тарифы</a>
+                <a href="#" class="footer-link">Блог</a>
             </nav>
             <div class="footer-socials">
-                <a href="#" class="social-link">VK</a>
-                <a href="#" class="social-link">TG</a>
+                <a href="#" class="social-icon">🔵</a>
+                <a href="#" class="social-icon">📷</a>
+                <a href="#" class="social-icon">🕊️</a>
+                <a href="#" class="social-icon">📺</a>
             </div>
+            <p class="copyright">&copy; 2026 FitWay. Все права защищены.</p>
         </div>
     </footer>
 
-    <script>
-        const btnDesktop = document.getElementById('view-desktop');
-        const btnMobile = document.getElementById('view-mobile');
-        const dashboard = document.getElementById('dashboard');
-
-        btnDesktop.addEventListener('click', () => {
-            btnDesktop.classList.add('active');
-            btnMobile.classList.remove('active');
-            dashboard.classList.remove('force-mobile');
-        });
-
-        btnMobile.addEventListener('click', () => {
-            btnMobile.classList.add('active');
-            btnDesktop.classList.remove('active');
-            dashboard.classList.add('force-mobile');
-        });
-    </script>
 </body>
 </html>
