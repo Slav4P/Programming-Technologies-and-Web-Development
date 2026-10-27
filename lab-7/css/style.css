@@ -321,6 +321,9 @@ a {
     color: var(--dark-color);
 }
 
+.card-meta img {
+    height: 13px;
+}
 
 .features-grid {
     display: grid;
@@ -331,6 +334,11 @@ a {
 .feature-card {
     padding: 30px 24px;
     text-align: left;
+}
+
+.feature-card img {
+    height: 100px;
+    background-size: cover;
 }
 
 .feature-icon {
@@ -438,6 +446,10 @@ a {
     font-size: 20px;
     filter: grayscale(1);
     transition: filter 0.3s;
+}
+
+.social-icon img {
+    height: 50px;
 }
 
 .social-icon:hover {
