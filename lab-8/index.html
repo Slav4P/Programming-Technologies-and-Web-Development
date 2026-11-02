@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Петербург — туристический путеводитель</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#home">
+            ПЕТЕРБУРГ<span class="brand-dot">.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+
+            <ul class="navbar-nav ms-auto gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">Категории</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#places">Достопримечательности</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#route">Маршрут</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#map">Карта</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="badge hero-badge">ТУРИСТИЧЕСКИЙ ПУТЕВОДИТЕЛЬ</span>
+
+        <h1>Санкт-Петербург</h1>
+
+        <p class="hero-description">
+            Город величественной архитектуры, белых ночей
+            и неповторимой атмосферы.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+
+            <a href="#places" class="btn btn-light btn-lg">
+                Достопримечательности
+            </a>
+
+            <a href="#route" class="btn btn-outline-light btn-lg">
+                Маршрут на день
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="container py-5">
+
+    <!-- Breadcrumb -->
+
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#home">Главная</a>
+            </li>
+            <li class="breadcrumb-item active">
+                Санкт-Петербург
+            </li>
+        </ol>
+    </nav>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro-section mb-5">
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-7">
+
+                <span class="section-label">О ГОРОДЕ</span>
+
+                <h2 class="section-title">
+                    Откройте для себя Петербург
+                </h2>
+
+                <p>
+                    Санкт-Петербург — один из самых красивых городов
+                    России. Его исторический центр, многочисленные
+                    каналы, мосты и дворцы создают уникальный облик.
+                </p>
+
+                <p>
+                    Здесь можно посетить знаменитые музеи,
+                    прогуляться по набережным Невы и познакомиться
+                    с архитектурным наследием разных эпох.
+                </p>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556610961-2fecc5927173?w=900"
+                    class="img-fluid rounded-3 intro-image"
+                    alt="Архитектура Санкт-Петербурга">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section id="categories" class="mb-5 py-4">
+
+        <div class="section-heading mb-4">
+            <span class="section-label">ИССЛЕДУЙТЕ ГОРОД</span>
+            <h2 class="section-title">Категории</h2>
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-3">
+                <a href="#places" class="category-card">
+                    <span class="category-number">01</span>
+                    <h5>Музеи</h5>
+                    <p>Искусство и история</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="#places" class="category-card">
+                    <span class="category-number">02</span>
+                    <h5>Архитектура</h5>
+                    <p>Дворцы и памятники</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="#places" class="category-card">
+                    <span class="category-number">03</span>
+                    <h5>Парки</h5>
+                    <p>Отдых и прогулки</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="#places" class="category-card">
+                    <span class="category-number">04</span>
+                    <h5>Развлечения</h5>
+                    <p>Интересные места</p>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATTRACTIONS -->
+
+    <section id="places" class="mb-5 py-4">
+
+        <div class="section-heading mb-4">
+
+            <span class="section-label">ЧТО ПОСМОТРЕТЬ</span>
+
+            <h2 class="section-title">
+                Популярные достопримечательности
+            </h2>
+
+            <p class="text-secondary">
+                Места, которые стоит посетить во время путешествия.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Place 1 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card place-card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800"
+                        class="card-img-top"
+                        alt="Эрмитаж">
+
+                    <div class="card-body">
+
+                        <span class="badge category-badge">Музеи</span>
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <h5 class="card-title">Эрмитаж</h5>
+                            <span class="rating">★ 4.9</span>
+                        </div>
+
+                        <p class="card-text">
+                            Один из крупнейших художественных музеев
+                            мира, расположенный в Зимнем дворце.
+                        </p>
+
+                        <button class="btn btn-outline-dark"
+                                data-bs-toggle="modal"
+                                data-bs-target="#hermitageModal">
+                            Подробнее
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Place 2 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card place-card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?w=800"
+                        class="card-img-top"
+                        alt="Спас на Крови">
+
+                    <div class="card-body">
+
+                        <span class="badge category-badge">Архитектура</span>
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <h5 class="card-title">Спас на Крови</h5>
+                            <span class="rating">★ 4.9</span>
+                        </div>
+
+                        <p class="card-text">
+                            Знаменитый храм с яркими куполами
+                            и богатым мозаичным убранством.
+                        </p>
+
+                        <button class="btn btn-outline-dark"
+                                data-bs-toggle="modal"
+                                data-bs-target="#churchModal">
+                            Подробнее
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Place 3 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card place-card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1568797629192-5c6b1c7c7d5e?w=800"
+                        class="card-img-top"
+                        alt="Петропавловская крепость">
+
+                    <div class="card-body">
+
+                        <span class="badge category-badge">История</span>
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <h5 class="card-title">Петропавловская крепость</h5>
+                            <span class="rating">★ 4.8</span>
+                        </div>
+
+                        <p class="card-text">
+                            Историческое сердце города и место,
+                            с которого началась его история.
+                        </p>
+
+                        <button class="btn btn-outline-dark"
+                                data-bs-toggle="modal"
+                                data-bs-target="#fortressModal">
+                            Подробнее
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHOTO CAROUSEL -->
+
+    <section class="mb-5 py-4">
+
+        <div class="section-heading mb-4">
+
+            <span class="section-label">ФОТОГАЛЕРЕЯ</span>
+            <h2 class="section-title">Атмосфера Петербурга</h2>
+
+        </div>
+
+        <div id="cityCarousel" class="carousel slide"
+             data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#cityCarousel"
+                        data-bs-slide-to="0" class="active"></button>
+
+                <button type="button" data-bs-target="#cityCarousel"
+                        data-bs-slide-to="1"></button>
+
+                <button type="button" data-bs-target="#cityCarousel"
+                        data-bs-slide-to="2"></button>
+
+            </div>
+
+            <div class="carousel-inner rounded-3">
+
+                <div class="carousel-item active">
+                    <img
+                        src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1400"
+                        class="d-block w-100 gallery-image"
+                        alt="Городская архитектура">
+
+                    <div class="carousel-caption">
+                        <h5>Архитектура города</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=1400"
+                        class="d-block w-100 gallery-image"
+                        alt="Городские улицы">
+
+                    <div class="carousel-caption">
+                        <h5>Улицы Петербурга</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1400"
+                        class="d-block w-100 gallery-image"
+                        alt="Панорама города">
+
+                    <div class="carousel-caption">
+                        <h5>Красота исторического города</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#cityCarousel"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#cityCarousel"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ONE DAY ROUTE -->
+
+    <section id="route" class="mb-5 py-4">
+
+        <div class="section-heading mb-4">
+
+            <span class="section-label">ПЛАН ПУТЕШЕСТВИЯ</span>
+            <h2 class="section-title">Петербург за один день</h2>
+
+            <p class="text-secondary">
+                Маршрут для знакомства с главными символами города.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-7">
+
+                <div class="list-group route-list">
+
+                    <div class="list-group-item">
+                        <div class="d-flex gap-3">
+
+                            <span class="route-time">09:00</span>
+
+                            <div>
+                                <h5>Дворцовая площадь</h5>
+                                <p class="mb-0 text-secondary">
+                                    Начало прогулки и знакомство
+                                    с историческим центром.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex gap-3">
+
+                            <span class="route-time">10:30</span>
+
+                            <div>
+                                <h5>Эрмитаж</h5>
+                                <p class="mb-0 text-secondary">
+                                    Посещение одного из главных музеев города.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex gap-3">
+
+                            <span class="route-time">13:00</span>
+
+                            <div>
+                                <h5>Исаакиевский собор</h5>
+                                <p class="mb-0 text-secondary">
+                                    Осмотр величественного собора
+                                    и его колоннады.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex gap-3">
+
+                            <span class="route-time">15:00</span>
+
+                            <div>
+                                <h5>Спас на Крови</h5>
+                                <p class="mb-0 text-secondary">
+                                    Знакомство с уникальной архитектурой храма.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex gap-3">
+
+                            <span class="route-time">18:00</span>
+
+                            <div>
+                                <h5>Набережная Невы</h5>
+                                <p class="mb-0 text-secondary">
+                                    Завершение прогулки с видом на реку.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tourist information -->
+
+            <div class="col-lg-5">
+
+                <div class="info-card h-100">
+
+                    <span class="section-label">ПОЛЕЗНО ЗНАТЬ</span>
+
+                    <h3 class="mt-3">Перед поездкой</h3>
+
+                    <ul class="list-unstyled mt-4">
+
+                        <li class="mb-3">
+                            <strong>Лучшее время:</strong>
+                            май — сентябрь.
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Транспорт:</strong>
+                            метро, автобусы и трамваи.
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Валюта:</strong>
+                            российский рубль.
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Совет:</strong>
+                            возьмите зонт — погода может быстро меняться.
+                        </li>
+
+                    </ul>
+
+                    <div class="weather-block mt-4">
+
+                        <span class="section-label">ПОГОДА</span>
+
+                        <h2 class="mt-2">Санкт-Петербург</h2>
+
+                        <p class="mb-0 text-secondary">
+                            Перед путешествием проверьте актуальный прогноз.
+                        </p>
+
+                        <a href="https://www.gismeteo.ru/weather-sankt-peterburg-4079/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline-dark mt-3">
+                            Посмотреть погоду
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAP -->
+
+    <section id="map" class="mb-5 py-4">
+
+        <div class="section-heading mb-4">
+
+            <span class="section-label">ОРИЕНТИРУЙТЕСЬ В ГОРОДЕ</span>
+            <h2 class="section-title">Карта Санкт-Петербурга</h2>
+
+            <p class="text-secondary">
+                Посмотрите расположение исторического центра города.
+            </p>
+
+        </div>
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=30.27%2C59.92%2C30.36%2C59.95&layer=mapnik"
+                width="100%"
+                height="400"
+                style="border:0;"
+                loading="lazy"
+                title="Карта Санкт-Петербурга">
+            </iframe>
+
+        </div>
+
+        <a href="https://www.openstreetmap.org/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="small text-secondary mt-2 d-inline-block">
+            Открыть OpenStreetMap
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- ================= MODALS ================= -->
+
+<!-- Hermitage -->
+
+<div class="modal fade" id="hermitageModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Государственный Эрмитаж</h5>
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    Эрмитаж — крупнейший музейный комплекс,
+                    основанный в 1764 году. В его коллекции находятся
+                    произведения искусства разных эпох и стран.
+                </p>
+
+                <p><strong>Адрес:</strong> Дворцовая площадь, 2.</p>
+                <p><strong>Категория:</strong> Музеи.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-dark"
+                        data-bs-dismiss="modal">
+                    Закрыть
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Church -->
+
+<div class="modal fade" id="churchModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Спас на Крови</h5>
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    Храм Воскресения Христова построен на месте
+                    гибели императора Александра II.
+                    Он известен своими разноцветными куполами
+                    и богатым мозаичным оформлением.
+                </p>
+
+                <p><strong>Адрес:</strong> набережная канала Грибоедова, 2Б.</p>
+                <p><strong>Категория:</strong> Архитектура.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-dark"
+                        data-bs-dismiss="modal">
+                    Закрыть
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Fortress -->
+
+<div class="modal fade" id="fortressModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Петропавловская крепость</h5>
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    Крепость была заложена Петром I в 1703 году
+                    и стала отправной точкой строительства
+                    Санкт-Петербурга.
+                </p>
+
+                <p><strong>Адрес:</strong> Заячий остров.</p>
+                <p><strong>Категория:</strong> История.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-dark"
+                        data-bs-dismiss="modal">
+                    Закрыть
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <h4 class="fw-bold">
+                    ПЕТЕРБУРГ<span class="brand-dot">.</span>
+                </h4>
+
+                <p class="text-secondary mt-3">
+                    Туристический путеводитель по одному
+                    из самых красивых городов мира.
+                </p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h6>Навигация</h6>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#categories">Категории</a></li>
+                    <li><a href="#places">Достопримечательности</a></li>
+                    <li><a href="#route">Маршрут</a></li>
+                    <li><a href="#map">Карта</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h6>Полезные ссылки</h6>
+
+                <ul class="list-unstyled footer-links">
+                    <li>
+                        <a href="https://www.gov.spb.ru/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Официальный портал города
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.hermitagemuseum.org/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Сайт Эрмитажа
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center text-secondary mb-0">
+            © 2026 Петербург — туристический путеводитель
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Собственный JavaScript -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
