@@ -1,0 +1,39 @@
+.logo {
+    text-decoration: none !important;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-brand {
+    line-height: 0.5; 
+}
+
+.carousel-item {
+    height: 250px;
+}
+
+.carousel-item img {
+    object-position: center;
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+    height: 500px;
+    }
+}
