@@ -6,14 +6,14 @@
 
     <title>Мой Петербург - туристический путеводитель</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container">
 
                 <a href="" class="logo">
                     <img src="images/logo.png" alt="Мой Петербург" class="logo-image">
@@ -29,14 +29,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                        <a class="nav-link" href="#">Достопримечательности</a>
-                        <a class="nav-link" href="#">Маршруты</a>
-                        <a class="nav-link" href="#">Где поесть</a>
-                        <a class="nav-link" href="#">Полезная информация</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Главная</a>
+                        <a class="nav-link" href="#attractions">Достопримечательности</a>
+                        <a class="nav-link" href="#route">Маршруты</a>
+                        <a class="nav-link" href="#food">Где поесть</a>
+                        <a class="nav-link" href="#info">Полезная информация</a>
                         <button type="button" class="btn btn-primary">План поездки</button>
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -46,7 +47,7 @@
 
             <div class="row carousel-slider">
 
-                <div id="hero-carousel" class="carousel slide position-relative">
+                <div id="hero-carousel" class="carousel slide">
 
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,12 +58,42 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/slide-1.jpg" class="d-block w-100" alt="Слайд 1">
+
+                            <div class="carousel-caption">
+                                <h1>Санкт-Петербург</h1>
+                                <h3>Город, в который хочется возвращаться</h3>
+                                <p>История, культура, архитектура и неповторимая атмосфера северной столицы.</p>
+
+                                <a href="#route" class="btn btn-primary">Посмотреть маршруты</a>
+                                <a href="#info" class="btn btn-outline-light">О городе</a>
+                            </div>
+
                         </div>
                         <div class="carousel-item">
                             <img src="images/slide-2.jpg" class="d-block w-100" alt="Слайд 2">
+
+                            <div class="carousel-caption">
+                                <h1>Санкт-Петербург</h1>
+                                <h3>Город, в который хочется возвращаться</h3>
+                                <p>История, культура, архитектура и неповторимая атмосфера северной столицы.</p>
+
+                                <a href="#route" class="btn btn-primary">Посмотреть маршруты</a>
+                                <a href="#info" class="btn btn-outline-light">О городе</a>
+                            </div>
+
                         </div>
                         <div class="carousel-item">
                             <img src="images/slide-3.jpg" class="d-block w-100" alt="Слайд 3">
+
+                            <div class="carousel-caption">
+                                <h1>Санкт-Петербург</h1>
+                                <h3>Город, в который хочется возвращаться</h3>
+                                <p>История, культура, архитектура и неповторимая атмосфера северной столицы.</p>
+
+                                <a href="#route" class="btn btn-primary">Посмотреть маршруты</a>
+                                <a href="#info" class="btn btn-outline-light">О городе</a>
+                            </div>
+
                         </div>
                     </div>
 
@@ -78,186 +109,528 @@
 
                 </div>
 
-                <div class="container position-absolute">
-                    <span>ПУТЕШЕСТВУЙ • ОТКРЫВАЙ • ВДОХНОВЛЯЙСЯ</span>
-                    <h1>Санкт-Петербург</h1>
-                    <h3>Город, в который хочется возвращаться</h3>
-                    <p>История, культура, архитектура и неповторимая атмосфера северной столицы России.</p>
-                    <a href="#" class="btn btn-primary">Посмотреть маршруты →</a>
-                    <a href="#" class="btn btn-outline-light">О городе</a>
-                </div>
-
             </div>
             
 
             <!-- Карточки Достопримечательностей маленькие-->
-            <div class="row attractions-cards-category">
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/places.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Все места</h5>
-                            <p class="card-text">120+ объектов</p>
-                        </div>
+            <section class="row attractions-cards-category mt-1 m-4">
+                <div class="row g-3">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/places.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Все места</h5>
+                                <p class="card-text">120+ объектов</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/museum.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Музеи</h5>
-                            <p class="card-text">35 музеев</p>
-                        </div>
+                
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/museum.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Музеи</h5>
+                                <p class="card-text">35 музеев</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/castle.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Дворцы</h5>
-                            <p class="card-text">18 дворцов</p>
-                        </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/castle.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Дворцы</h5>
+                                <p class="card-text">18 дворцов</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/temple.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Храмы</h5>
-                            <p class="card-text">25 храмов</p>
-                        </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/temple.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Храмы</h5>
+                                <p class="card-text">25 храмов</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/park.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Парки</h5>
-                            <p class="card-text">14 парков</p>
-                        </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/park.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Парки</h5>
+                                <p class="card-text">14 парков</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card mini-card" style="width: 10rem;">
-                        <img src="images/entertainment.png" class="card-img-left" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Развлечения</h5>
-                            <p class="card-text">28 мест</p>
-                        </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="#attractions" class="card mini-card">
+                            <img src="images/entertainment.png" alt="" class="mini-card-img">
+                            <div class="card-body">
+                                <h5 class="card-title">Развлечения</h5>
+                                <p class="card-text">28 мест</p>
+                            </div>
+                        </a>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
             <!-- Карточки Достопримечательностей с картинками и погодой -->
-            <div class="row attractions-cards-badge">
-                <h2>Популярные достопримечательности</h2>
-                <div class="col">
-                    <div class="card badge-card" style="width: 18rem;">
-                        <img src="images/Cathedral.webp" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Исаакиевский собор</h5>
-                            <p class="card-text">Один из самых известных соборов мира с уникальной колоннадой.</p>
-                            <a href="#" class="btn btn-primary">Подробнее</a>
+            <section class="attractions-section my-5" id="attractions">
+                <h2 class="mb-4">Популярные достопримечательности</h2>
+
+                <div class="row g-4">
+
+                    <!-- Карточки -->
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <div class="card attraction-card h-100">
+                                    <img src="images/Cathedral.webp" class="card-img-top" alt="Исаакиевский собор">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Архитектура</span>
+                                        <h5 class="card-title">Исаакиевский собор</h5>
+                                        <p class="card-text">Один из самых известных соборов мира с уникальной колоннадой и панорамным видом на город.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#isaacModal">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card attraction-card h-100">
+                                    <img src="images/Hermitage.webp" class="card-img-top" alt="Эрмитаж">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Музеи</span>
+                                        <h5 class="card-title">Эрмитаж</h5>
+                                        <p class="card-text">Один из крупнейших музеев мира с богатейшей коллекцией произведений искусства.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hermitageModal">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card attraction-card h-100">
+                                    <img src="images/fortress.jpg" class="card-img-top" alt="Петропавловская крепость">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">История</span>
+                                        <h5 class="card-title">Петропавловская крепость</h5>
+                                        <p class="card-text">Историческое ядро города и место его основания в 1703 году.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fortressModal">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card attraction-card h-100">
+                                    <img src="images/kazan-cathedral.jpg" class="card-img-top" alt="Казанский собор">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Архитектура</span>
+                                        <h5 class="card-title">Казанский собор</h5>
+                                        <p class="card-text">Величественный собор с колоннадой, расположенный на Невском проспекте.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kazanModal">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
+
+                    <!-- Правая колонка -->
+                    <div class="col-lg-4">
+
+                        <div class="card season-card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Петербург в любое время года</h5>
+
+                                <ul class="nav nav-pills mb-3" role="tablist">
+                                    <li class="nav-item">
+                                        <button class="nav-link active" data-bs-toggle="pill"
+                                            data-bs-target="#spring" type="button">Весна</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#summer" type="button">Лето</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#autumn" type="button">Осень</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#winter" type="button">Зима</button>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="spring">
+                                        Весной цветут парки, а погода подходит для прогулок.
+                                    </div>
+                                    <div class="tab-pane fade" id="summer">
+                                        Летом можно увидеть белые ночи и развод мостов.
+                                    </div>
+                                    <div class="tab-pane fade" id="autumn">
+                                        Осенью город окрашивается в золотые цвета.
+                                    </div>
+                                    <div class="tab-pane fade" id="winter">
+                                        Зимой Петербург украшен праздничными огнями.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card weather-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Погода в Петербурге</h5>
+                                <p class="mb-1">Сейчас в городе</p>
+                                <h2>+12°C</h2>
+                                <p class="text-muted mb-0">Переменная облачность</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card badge-card" style="width: 18rem;">
-                        <img src="images/Hermitage.webp" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Эрмитаж</h5>
-                            <p class="card-text">Один из крупнейщих музеев мира. Коллекция более 3 миллионов экспонатов.</p>
-                            <a href="#" class="btn btn-primary">Подробнее</a>
+            </section>
+
+            
+            <!-- Modal: Исаакиевский собор -->
+            <div class="modal fade" id="isaacModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Исаакиевский собор</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/Cathedral.webp" class="img-fluid rounded mb-3"
+                                alt="Исаакиевский собор">
+                            <p>Один из крупнейших православных храмов России,
+                                известный своей величественной архитектурой и колоннадой.</p>
+                            <p><strong>Адрес:</strong> Исаакиевская площадь, 4.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card badge-card" style="width: 18rem;">
-                        <img src="images/fortress.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Петропавловская крепость</h5>
-                            <p class="card-text">Историческое ядро города и место его основания в 1703 году.</p>
-                            <a href="#" class="btn btn-primary">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card badge-card" style="width: 18rem;">
-                        <img src="images/kazan-cathedral.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Казанский собор</h5>
-                            <p class="card-text">Величественный собор в центре города</p>
-                            <a href="#" class="btn btn-primary">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row season-tabs">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-                        </div>
-                    </div>
-                    <div class="row weather-card">2</div>
                 </div>
             </div>
+
+            <!-- Modal: Эрмитаж -->
+            <div class="modal fade" id="hermitageModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Эрмитаж</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/Hermitage.webp" class="img-fluid rounded mb-3"
+                                alt="Эрмитаж">
+                            <p>Один из крупнейших художественных музеев мира,
+                                расположенный в историческом центре Петербурга.</p>
+                            <p><strong>Адрес:</strong> Дворцовая площадь, 2.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal: Петропавловская крепость -->
+            <div class="modal fade" id="fortressModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Петропавловская крепость</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/fortress.jpg" class="img-fluid rounded mb-3"
+                                alt="Петропавловская крепость">
+                            <p>Крепость, основанная Петром I в 1703 году.
+                                Считается историческим ядром Санкт-Петербурга.</p>
+                            <p><strong>Адрес:</strong> Заячий остров.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal: Казанский собор -->
+            <div class="modal fade" id="kazanModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Казанский собор</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/kazan-cathedral.jpg" class="img-fluid rounded mb-3"
+                                alt="Казанский собор">
+                            <p>Православный собор с величественной колоннадой,
+                                расположенный на Невском проспекте.</p>
+                            <p><strong>Адрес:</strong> Казанская площадь, 2.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- маршрут с шагами и картой -->
-            <div class="row timeline">
-                <div class="col">1</div>
-                <div class="col">2</div>
-            </div>
+            <!-- Маршрут по достопримечательностям -->
+            <section class="route-section my-5" id="route">
+                <h2 class="mb-4">Маршрут по Петербургу</h2>
+
+                <div class="row g-4">
+
+                    <!-- Список остановок -->
+                    <div class="col-lg-6">
+                        <div class="list-group">
+
+                            <div class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-1">1. Исаакиевский собор</h5>
+                                    <span class="badge bg-primary">Начало</span>
+                                </div>
+                                <p class="mb-1">Осмотр собора и подъём на колоннаду.</p>
+                                <small class="text-muted">Время посещения: 40–60 минут</small>
+                            </div>
+
+                            <div class="list-group-item">
+                                <h5 class="mb-1">2. Казанский собор</h5>
+                                <p class="mb-1">Знакомство с архитектурой собора на Невском проспекте.</p>
+                                <small class="text-muted">Время посещения: 20–30 минут</small>
+                            </div>
+
+                            <div class="list-group-item">
+                                <h5 class="mb-1">3. Эрмитаж</h5>
+                                <p class="mb-1">Посещение музея и знакомство с коллекцией произведений искусства.</p>
+                                <small class="text-muted">Время посещения: 1–2 часа</small>
+                            </div>
+
+                            <div class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-1">4. Петропавловская крепость</h5>
+                                    <span class="badge bg-success">Финиш</span>
+                                </div>
+                                <p class="mb-1">Прогулка по территории исторической крепости.</p>
+                                <small class="text-muted">Время посещения: 40–60 минут</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Карта маршрута -->
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Карта маршрута</h5>
+
+                                <iframe
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=30.28%2C59.92%2C30.34%2C59.95&layer=mapnik"
+                                    width="100%"
+                                    height="400"
+                                    style="border: 0; border-radius: 10px;"
+                                    loading="lazy"
+                                    title="Карта достопримечательностей Санкт-Петербурга">
+                                </iframe>
+
+                                <p class="text-muted small mt-2 mb-0">
+                                    Интерактивная карта центра Санкт-Петербурга.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
             <!-- карточки с полезной информацией и подпиской -->
-            <div class="row">
-                <div class="col">1</div>
-                <div class="col">2</div>
-            </div>
+            
+            <!-- Полезная информация и подписка -->
+            <section class="info-section my-5" id="info">
+                <h2 class="mb-4">Полезная информация</h2>
+
+                <div class="row g-4">
+
+                    <!-- Левая колонка: карточки -->
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">🚇</div>
+                                        <h5 class="card-title">Транспорт</h5>
+                                        <p class="card-text">Метро, автобусы и трамваи помогут удобно передвигаться по городу.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">💳</div>
+                                        <h5 class="card-title">Оплата</h5>
+                                        <p class="card-text">Для оплаты покупок и услуг можно использовать банковские карты.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">📶</div>
+                                        <h5 class="card-title">Связь</h5>
+                                        <p class="card-text">В городе доступны мобильная связь и Wi-Fi в некоторых общественных местах.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">🛡️</div>
+                                        <h5 class="card-title">Безопасность</h5>
+                                        <p class="card-text">Следите за личными вещами и соблюдайте правила поведения в общественных местах.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">🏛️</div>
+                                        <h5 class="card-title">Музеи</h5>
+                                        <p class="card-text">Перед посещением музеев проверяйте расписание и условия покупки билетов.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card info-card h-100">
+                                    <div class="card-body">
+                                        <div class="info-icon">ℹ️</div>
+                                        <h5 class="card-title">Туристам</h5>
+                                        <p class="card-text">Заранее планируйте экскурсии и учитывайте время работы достопримечательностей.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка: подписка -->
+                    <div class="col-lg-4">
+                        <div class="card subscribe-card h-100">
+                            <div class="card-body">
+                                <div class="info-icon">📩</div>
+                                <h4 class="card-title">Новости Петербурга</h4>
+                                <p class="text-muted">
+                                    Подпишитесь, чтобы получать новости города,
+                                    интересные события и полезные туристические советы.
+                                </p>
+
+                                <form id="subscribeForm">
+                                    <div class="mb-3">
+                                        <label for="subscribeEmail" class="form-label">
+                                            Ваш E-mail
+                                        </label>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="subscribeEmail"
+                                            placeholder="example@mail.com"
+                                            required>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        Подписаться
+                                    </button>
+
+                                    <p id="subscribeMessage" class="small mt-3 mb-0"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
 
         </div>
 
-        <!-- <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        
+        <!-- Footer -->
+        <footer class="site-footer mt-5">
+            <div class="container py-4">
+
+                <div class="row g-4">
+
+                    <!-- О сайте -->
+                    <div class="col-md-4">
+                        <h4 class="footer-title">Мой Петербург</h4>
+                        <p class="footer-text">
+                            Откройте для себя красоту и историю
+                            Санкт-Петербурга вместе с нами.
+                        </p>
+                    </div>
+
+                    <!-- Навигация -->
+                    <div class="col-md-4">
+                        <h5 class="footer-heading">Навигация</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#attractions">Достопримечательности</a></li>
+                            <li><a href="#route">Маршруты</a></li>
+                            <li><a href="#info">Полезная информация</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Контакты -->
+                    <div class="col-md-4">
+                        <h5 class="footer-heading">Контакты</h5>
+                        <p class="footer-text mb-2">Электронная почта:</p>
+                        <a href="mailto:info@myspb.ru" class="footer-contact">
+                            info@myspb.ru
+                        </a>
+                        <p class="footer-text mt-3">
+                            Санкт-Петербург, Россия
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="d-flex flex-column flex-md-row
+                            justify-content-between align-items-center">
+                    <p class="footer-text mb-2 mb-md-0">
+                        © 2026 Мой Петербург. Все права защищены.
+                    </p>
+                    <a href="#home" class="footer-up">
+                        Наверх ↑
+                    </a>
+                </div>
+
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/slide-1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/slide-2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/slide-3.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
+        </footer>
+
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
