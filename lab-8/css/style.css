@@ -246,7 +246,22 @@ header .container {
     margin: 25px 0 15px;
 }
 
+.recommendations-section .card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+}
 
+.recommendations-section .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-section .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
 
 /* ПК */
 @media (min-width: 768px) {

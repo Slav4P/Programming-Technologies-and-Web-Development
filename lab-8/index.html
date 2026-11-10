@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
     <header>
@@ -43,6 +45,20 @@
     </header>
 
     <main>
+
+        <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#home">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Путеводитель по Петербургу
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
         <div class="container grid-container">
 
             <div class="row carousel-slider">
@@ -197,6 +213,10 @@
                                         <span class="badge bg-primary mb-2">Архитектура</span>
                                         <h5 class="card-title">Исаакиевский собор</h5>
                                         <p class="card-text">Один из самых известных соборов мира с уникальной колоннадой и панорамным видом на город.</p>
+                                        <div class="rating mb-2">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small">4.9 / 5</span>
+                                        </div>
                                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#isaacModal">Подробнее</button>
                                     </div>
                                 </div>
@@ -209,6 +229,10 @@
                                         <span class="badge bg-primary mb-2">Музеи</span>
                                         <h5 class="card-title">Эрмитаж</h5>
                                         <p class="card-text">Один из крупнейших музеев мира с богатейшей коллекцией произведений искусства.</p>
+                                        <div class="rating mb-2">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small">4.7 / 5</span>
+                                        </div>
                                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hermitageModal">Подробнее</button>
                                     </div>
                                 </div>
@@ -221,6 +245,10 @@
                                         <span class="badge bg-primary mb-2">История</span>
                                         <h5 class="card-title">Петропавловская крепость</h5>
                                         <p class="card-text">Историческое ядро города и место его основания в 1703 году.</p>
+                                        <div class="rating mb-2">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small">4.8 / 5</span>
+                                        </div>
                                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fortressModal">Подробнее</button>
                                     </div>
                                 </div>
@@ -233,6 +261,10 @@
                                         <span class="badge bg-primary mb-2">Архитектура</span>
                                         <h5 class="card-title">Казанский собор</h5>
                                         <p class="card-text">Величественный собор с колоннадой, расположенный на Невском проспекте.</p>
+                                        <div class="rating mb-2">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small">5 / 5</span>
+                                        </div>
                                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kazanModal">Подробнее</button>
                                     </div>
                                 </div>
@@ -390,6 +422,62 @@
                 </div>
             </div>
 
+                        <!-- Рекомендации -->
+            <section class="recommendations-section my-5">
+                <h2 class="mb-4">Что стоит попробовать в Петербурге</h2>
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/white-night.webp"
+                                class="card-img-top"
+                                alt="Белые ночи в Петербурге">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Атмосфера</span>
+                                <h5 class="card-title">Белые ночи</h5>
+                                <p class="card-text">
+                                    Прогуляйтесь по городу поздним вечером
+                                    и насладитесь необычным освещением улиц.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/bridges.webp"
+                                class="card-img-top"
+                                alt="Развод мостов">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Экскурсии</span>
+                                <h5 class="card-title">Развод мостов</h5>
+                                <p class="card-text">
+                                    Посмотрите на знаменитые разводные мосты
+                                    через Неву.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/palace.jfif"
+                                class="card-img-top"
+                                alt="Дворцовая площадь">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Прогулки</span>
+                                <h5 class="card-title">Дворцовая площадь</h5>
+                                <p class="card-text">
+                                    Посетите одну из главных площадей
+                                    Санкт-Петербурга.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
             <!-- маршрут с шагами и картой -->
             <section class="route-section my-5" id="route">
@@ -631,5 +719,7 @@
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
