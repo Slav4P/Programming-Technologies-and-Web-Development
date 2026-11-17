@@ -170,7 +170,7 @@ body.menu-open .side-menu-toggle {
     color: #fff;
     background:
         linear-gradient(90deg, rgba(12, 28, 45, .84), rgba(12, 28, 45, .28)),
-        url("/lab-9/img/phon.jpg") center 48% / cover;
+        url("../img/phon.jpg") center 48% / cover;
 }
 
 .hero-content { max-width: 760px; }
