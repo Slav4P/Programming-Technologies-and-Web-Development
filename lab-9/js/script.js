@@ -1,55 +1,64 @@
 const photos = [
     {
         id: 1,
-        image: "img/morein.jpg",
-        title: "Озеро Морейн",
-        description: "Бирюзовое озеро среди величественных Скалистых гор.",
-        country: "canada", category: "nature", date: "2026-10-15", favorite: false
-    },
-    {
-        id: 2,
-        image: "img/santorini.jpg",
+        images: [ 
+        "img/santorini.jpg",
+        "img/santor2.jfif",
+        "img/santor3.jpg"],
         title: "Санторини",
         description: "Белоснежные дома и синие купола на берегу Эгейского моря.",
         country: "greece", category: "cities", date: "2026-09-10", favorite: false
     },
     {
-        id: 3,
-        image: "img/kioto.jpg",
+        id: 2,
+        images: [ 
+        "img/kioto.jpg",
+        "img/kioto2.jpg",
+        "img/kioto3.jpg"],
         title: "Улицы Киото",
         description: "Традиционная архитектура и тихие улочки старого города.",
         country: "japan", category: "culture", date: "2026-08-20", favorite: false
     },
     {
-        id: 4,
-        image: "img/venevia.jpg",
+        id: 3,
+        images: [ 
+        "img/venevia.jpg",
+        "img/venevia2.jpg"],
         title: "Каналы Венеции",
         description: "Город мостов, каналов и старинных фасадов.",
         country: "italy", category: "cities", date: "2026-07-12", favorite: false
     },
     {
-        id: 5,
-        image: "img/norvey.jpg",
+        id: 4,
+        images: [ 
+        "img/norvey.jpg",
+        "img/norvey2.jpg",
+        "img/norvey3.jpg"],
         title: "Норвежский фьорд",
         description: "Спокойная вода, горы и небольшие домики у берега.",
         country: "norway", category: "nature", date: "2026-05-18", favorite: false
     },
     {
-        id: 6,
-        image: "img/parije.jpg",
+        id: 5,
+        images: [ 
+        "img/parije.jpg",
+        "img/parije2.jpg"],
         title: "Париж",
         description: "Знакомство с архитектурой и атмосферой французской столицы.",
         country: "france", category: "cities", date: "2025-11-02", favorite: false
     },
     {
-        id: 7,
-        image: "img/more.jpg",
+        id: 6,
+        images: [ 
+        "img/more.jpg",
+        "img/more2.jpg",
+        "img/more3.jpg"],
         title: "Морское побережье",
         description: "Шум волн и просторный горизонт.",
         country: "greece", category: "nature", date: "2025-06-22", favorite: false
     },
     {
-        id: 8,
+        id: 7,
         image: "img/sobaka.jpg",
         title: "Путешественник",
         description: "Маленькая встреча с местным четвероногим жителем.",
@@ -93,7 +102,7 @@ const elements = {
 
 const itemsPerPage = 4; 
 let currentPhotos = [];
-let currentIndex = 0;
+let currentImageIndex = 0;
 let currentPage = 1;
 let currentView = "all";
 
@@ -142,7 +151,7 @@ function createPhotoCard(photo, index) {
 
     const image = document.createElement("img");
     image.className = "photo-card-image";
-    image.src = photo.image;
+    image.src = (photo.images || [photo.image])[0];
     image.alt = photo.title;
     image.loading = "lazy";
     image.dataset.photoId = String(photo.id);
@@ -271,13 +280,24 @@ function openPhoto(index) {
     if (index < 0 || index >= currentPhotos.length) return;
 
     currentIndex = index;
-    const photo = currentPhotos[currentIndex];
+    currentImageIndex = 0;
 
-    elements.photoImage.src = photo.image;
+    const photo = currentPhotos[currentIndex];
+    const images = photo.images || [photo.image];
+
+    elements.photoImage.src = images[currentImageIndex];
     elements.photoImage.alt = photo.title;
     elements.photoTitle.textContent = photo.title;
     elements.photoDescription.textContent = photo.description || "Описание не добавлено.";
-    elements.viewerLocation.textContent = `${countryNames[photo.country] || ""} · ${categoryNames[photo.category] || ""}`;
+    elements.viewerLocation.textContent =
+        `${countryNames[photo.country] || ""} · ${categoryNames[photo.category] || ""}`;
+
+    document.getElementById("imageCounter").textContent =
+        `${currentImageIndex + 1} / ${images.length}`;
+
+    document.getElementById("prevImage").disabled = true;
+    document.getElementById("nextImage").disabled = images.length <= 1;
+
     updateViewerControls();
 
     if (!elements.photoDialog.open) {
@@ -299,6 +319,27 @@ function changePhoto(step) {
     const nextIndex = currentIndex + step;
     if (nextIndex < 0 || nextIndex >= currentPhotos.length) return;
     openPhoto(nextIndex);
+}
+
+function changeImage(step) {
+    const photo = currentPhotos[currentIndex];
+
+    if (!photo) return;
+
+    const images = photo.images || [photo.image];
+    const nextIndex = currentImageIndex + step;
+
+    if (nextIndex < 0 || nextIndex >= images.length) return;
+
+    currentImageIndex = nextIndex;
+    elements.photoImage.src = images[currentImageIndex];
+
+    document.getElementById("imageCounter").textContent =
+        `${currentImageIndex + 1} / ${images.length}`;
+
+    document.getElementById("prevImage").disabled = currentImageIndex === 0;
+    document.getElementById("nextImage").disabled =
+        currentImageIndex === images.length - 1;
 }
 
 function toggleFavorite(photoId) {
@@ -413,7 +454,7 @@ elements.addForm.addEventListener("submit", event => {
 
     const newPhoto = {
         id: Date.now(),
-        image: URL.createObjectURL(file),
+        images: [URL.createObjectURL(file)],
         title,
         description,
         country,
@@ -463,6 +504,14 @@ document.getElementById("openAddPhoto").addEventListener("click", () => {
 
 document.addEventListener("keydown", event => {
     if (event.key === "Escape") closeSideMenu();
+});
+
+document.getElementById("prevImage").addEventListener("click", () => {
+    changeImage(-1);
+});
+
+document.getElementById("nextImage").addEventListener("click", () => {
+    changeImage(1);
 });
 
 renderGallery();
