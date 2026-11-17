@@ -1,56 +1,56 @@
 const photos = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1503614472-8c93d56cd5b0?auto=format&fit=crop&w=1000&q=85",
+        image: "img/morein.jpg",
         title: "Озеро Морейн",
         description: "Бирюзовое озеро среди величественных Скалистых гор.",
         country: "canada", category: "nature", date: "2026-10-15", favorite: false
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=85",
+        image: "img/santorini.jpg",
         title: "Санторини",
         description: "Белоснежные дома и синие купола на берегу Эгейского моря.",
         country: "greece", category: "cities", date: "2026-09-10", favorite: false
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85",
+        image: "img/kioto.jpg",
         title: "Улицы Киото",
         description: "Традиционная архитектура и тихие улочки старого города.",
         country: "japan", category: "culture", date: "2026-08-20", favorite: false
     },
     {
         id: 4,
-        image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1000&q=85",
+        image: "img/venevia.jpg",
         title: "Каналы Венеции",
         description: "Город мостов, каналов и старинных фасадов.",
         country: "italy", category: "cities", date: "2026-07-12", favorite: false
     },
     {
         id: 5,
-        image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85",
+        image: "img/norvey.jpg",
         title: "Норвежский фьорд",
         description: "Спокойная вода, горы и небольшие домики у берега.",
         country: "norway", category: "nature", date: "2026-05-18", favorite: false
     },
     {
         id: 6,
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85",
+        image: "img/parije.jpg",
         title: "Париж",
         description: "Знакомство с архитектурой и атмосферой французской столицы.",
         country: "france", category: "cities", date: "2025-11-02", favorite: false
     },
     {
         id: 7,
-        image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85",
+        image: "img/more.jpg",
         title: "Морское побережье",
         description: "Шум волн и просторный горизонт.",
         country: "greece", category: "nature", date: "2025-06-22", favorite: false
     },
     {
         id: 8,
-        image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1000&q=85",
+        image: "img/sobaka.jpg",
         title: "Путешественник",
         description: "Маленькая встреча с местным четвероногим жителем.",
         country: "italy", category: "animals", date: "2025-03-14", favorite: false
@@ -97,7 +97,6 @@ let currentIndex = 0;
 let currentPage = 1;
 let currentView = "all";
 
-// Возвращает фотографии, подходящие под выбранные фильтры.
 function getFilteredPhotos() {
     const country = elements.country.value;
     const category = elements.category.value;
